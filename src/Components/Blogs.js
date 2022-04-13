@@ -1,16 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Styles from "./Blogs.module.css";
 
-const Blogs = () => {
+const Blogs = (props) => {
+  // destructure values
+  const { title, author, id } = props.blog;
   return (
     <div className={Styles["blog-preview"]}>
-      <h2>Blog One</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eveniet
-        assumenda quod rem provident necessitatibus magni autem in, nostrum
-        porro numquam quis, dignissimos expedita error nesciunt rerum
-        repellendus neque fugiat.
-      </p>
+      <h2>{title}</h2>
+      <p> Published by : {author}</p>
     </div>
   );
 };
