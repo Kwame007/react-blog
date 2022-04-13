@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Styles from "./Blogs.module.css";
 
 const Blogs = (props) => {
