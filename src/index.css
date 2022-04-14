@@ -20,3 +20,10 @@ code {
   font-family: "Quicksand";
   color: #333;
 }
+
+.loading {
+  color: #16a596;
+  position: fixed;
+  left: 50%;
+  top: 20%;
+}
