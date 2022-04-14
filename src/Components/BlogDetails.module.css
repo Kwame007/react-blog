@@ -1,0 +1,33 @@
+/* blog details page */
+.blog-details h2 {
+  font-size: 20px;
+  color: #495464;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+.blog-details button {
+  background: #ff6560;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-group button:first-child {
+  background-color: #16a596;
+  padding: 0.6rem 1rem;
+  margin-right: 5rem;
+}
+
+.author {
+  background-color: #16a596;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.3rem 1.5rem;
+  border-radius: 10px;
+}
