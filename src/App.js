@@ -1,12 +1,23 @@
-import BlogList from "./Components/BlogsList";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BlogDetails from "./Components/BlogDetails";
+import CreateBlog from "./Components/CreateBlog";
 import Nav from "./Components/Nav";
+
+import Home from "./Home";
 
 function App() {
   return (
-    <>
-      <Nav />
-      <BlogList />
-    </>
+    <BrowserRouter>
+      <div>
+        <Nav />
+
+        <Routes>
+          <Route path="/createBlog" element={<CreateBlog />} />
+          <Route path="/blogs/:id" element={<BlogDetails />} />
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
