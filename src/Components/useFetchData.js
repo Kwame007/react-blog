@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // custom hook to make data fetch requests
 // fetch blogs from server {json server}
@@ -41,6 +41,7 @@ const useFetchData = (url) => {
       abortFetch.abort();
     };
   }, [url]);
+
   return { data, isLoading, error };
 };
 export default useFetchData;
