@@ -1,20 +1,23 @@
-import React from "react";
 import Blogs from "./Blogs";
 import Styles from "./BlogList.module.css";
-import useFetchData from "./useFetchData";
+import { Link } from "react-router-dom";
 
-const BlogList = () => {
-  const { data, isLoading, error } = useFetchData(
-    "http://localhost:8000/blogs"
-  );
-  console.log(data);
-
+const BlogList = ({ data }) => {
   return (
     <div className={Styles.content}>
       <h2>All Blogs</h2>
       {/* Dynamic content rendering */}
-      {isLoading && <p>Loading</p>}
-      {!isLoading && data.map((blog) => <Blogs blog={blog} key={blog.id} />)}
+      {data.map((blog) => {
+        return (
+          <Link
+            to={`/blogs/${blog.id}`}
+            key={blog.id}
+            style={{ textDecoration: "none" }}
+          >
+            <Blogs blog={blog} />
+          </Link>
+        );
+      })}{" "}
     </div>
   );
 };
