@@ -3,7 +3,7 @@ import BlogDetails from "./Components/BlogDetails";
 import CreateBlog from "./Components/CreateBlog";
 import Nav from "./Components/Nav";
 
-import Home from "./Home";
+import Home from "./Components/Home";
 
 function App() {
   return (
