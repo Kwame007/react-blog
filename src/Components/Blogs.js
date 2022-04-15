@@ -1,9 +1,7 @@
 import React from "react";
 import Styles from "./Blogs.module.css";
 
-const Blogs = (props) => {
-  // destructure values
-  const { title, author, id } = props.blog;
+const Blogs = ({ blog: { title, author } }) => {
   return (
     <div className={Styles["blog-preview"]}>
       <h2>{title}</h2>
