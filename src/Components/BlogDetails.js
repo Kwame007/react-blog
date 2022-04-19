@@ -2,8 +2,11 @@ import useFetchData from "./useFetchData";
 import { useParams, useNavigate } from "react-router-dom";
 
 import Styles from "./BlogDetails.module.css";
+import { useState } from "react";
+import EditBlogModal from "./EditBlogModal";
 
 const BlogDetails = () => {
+  const [editState, setEditState] = useState(false);
   const { id } = useParams();
   const { data, isLoading } = useFetchData(
     `http://localhost:8000/blogs/${id} `
@@ -22,6 +25,7 @@ const BlogDetails = () => {
   // handle delete function
   const handleEdit = () => {
     console.log("edit clicked");
+    setEditState(true);
   };
   return (
     <>
@@ -29,6 +33,7 @@ const BlogDetails = () => {
         className={Styles["blog-details"]}
         style={{ maxWidth: "700px", margin: "100px auto" }}
       >
+        {editState && <EditBlogModal closeModal={setEditState} blog={data} />}
         {isLoading && <h4 className="loading">Loading...</h4>}
         {!isLoading && (
           <article>
