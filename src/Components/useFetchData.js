@@ -16,6 +16,7 @@ const useFetchData = (url) => {
         .then((res) => {
           if (!res.ok) {
             // setIsLoading(true);
+
             throw new Error("Could not fetch data");
           }
           return res.json();
@@ -29,9 +30,8 @@ const useFetchData = (url) => {
           if (err.name === "AbortError") {
             console.log("fetch aborted");
           } else {
-            setError(true);
             setIsLoading(false);
-            console.log(err.message);
+            setError(err.message);
           }
         });
     }, 1000);
