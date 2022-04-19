@@ -1,0 +1,59 @@
+.blog-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  max-width: 700px;
+  box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.blog-modal label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+.form-group {
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+.blog-modal input,
+.blog-modal textarea {
+  width: 80%;
+}
+.blog-modal textarea {
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.blog-modal textarea:focus {
+  outline: none;
+  border: 1.5px solid #16a596;
+}
+
+.blog-modal input,
+.blog-modal select {
+  padding: 0.7rem;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+}
+.blog-modal input:focus,
+.blog-modal select:focus {
+  outline: none;
+  border: 1.5px solid #16a596;
+}
+
+.blog-modal button {
+  background: #16a596;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
