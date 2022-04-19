@@ -1,0 +1,43 @@
+.create {
+  max-width: 700px;
+  margin: 50px auto;
+  /* text-align: center; */
+}
+.create label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+  color: #495464;
+}
+.create h2 {
+  font-size: 20px;
+  color: #16a596;
+  margin-bottom: 30px;
+}
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #16a596;
+  color: #fff;
+  border: 0;
+  padding: 8px 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.create input:focus,
+.create select:focus,
+.create textarea:focus {
+  outline: none;
+  border: 1.5px solid #16a596;
+}
