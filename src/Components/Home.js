@@ -7,10 +7,10 @@ const Home = () => {
     "http://localhost:8000/blogs"
   );
 
-  console.log(data);
   return (
     <React.Fragment>
       <div className="blog-preview">
+        {error && <h4>{error}</h4>}
         {isLoading && <h3 className="loading">Loading... </h3>}
         {!isLoading && <BlogList data={data} />}
       </div>
